@@ -15,7 +15,7 @@ public class WriteWordToFile {
 			pw = new FileWriter("dictionary.csv",true);
 			CSVPrinter csvPrinter = new CSVPrinter( pw, CSVFormat.DEFAULT );
 			
-			
+			/*
 			char[] lettersOfWord = word.toCharArray();
 			for(char ch : lettersOfWord) {
 				if( (ch-'a' < 0) || (ch-'a' > 26) ) {
@@ -25,7 +25,7 @@ public class WriteWordToFile {
 					return false;
 				}
 			}
-			
+			*/
 			
 			csvPrinter.flush();
 			csvPrinter.close();
