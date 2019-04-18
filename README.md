@@ -3,9 +3,10 @@ Student repository for 1dv600(Software Technology)
 Berk Can BALATACI
 
 Installation 
-1) Add 2 common-csv jar files into project's buildpath as External JARs 
-2) Compile project
-3) Run Hangman.java
+1) Download and unzip the project
+2) Add 2 common-csv jar files into project's buildpath as External JARs 
+3) Compile project
+4) Run Hangman.java
 
 Some screenshots from the game
 
