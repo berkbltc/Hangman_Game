@@ -7,11 +7,11 @@ public class Tester {
 
 	@Test
 	public void shouldReturnTrueIfUnexpectedLetter() {
-		
+
 		boolean expected = true;
 		boolean actual = Hangman.isUnexpectedLetter('4');
 		assertEquals(expected,actual);
-		actual = Hangman.isUnexpectedLetter('็');
+		actual = Hangman.isUnexpectedLetter('รง');
 		assertEquals(expected,actual);
 		actual = Hangman.isUnexpectedLetter('*');
 		assertEquals(expected,actual);
@@ -20,6 +20,7 @@ public class Tester {
 		actual = Hangman.isUnexpectedLetter('<');
 		assertEquals(expected,actual);		
 	}
+	
 	@Test
 	public void shouldReturnFixedString() {
 		
@@ -29,31 +30,27 @@ public class Tester {
 		assertEquals(expected,actual);
 		actual = sut.purifyWord("lov*?^e");
 		assertEquals(expected,actual); 
-
 	}
+	
 	@Test
 	public void shouldReturnNotEmptyString() {
 		
 		ReadWordsFromFile sut = new ReadWordsFromFile();
-		
-		String actual = sut.readWordFromCSV("dictionary.csv");
+		String actual = sut.readWordFromCSV("dictionary.csv").x;
 		assertNotNull(actual);
 		assertNotEquals("",actual);		
-		
 	}	
+	
 	@Test
 	public void shouldReturnTrueIfWrittenWordIsProper() {
 		
 		WriteWordToFile sut = new WriteWordToFile();
-		
 		boolean expected = true ;
 		boolean actual = sut.writeAWordToDictionary("berk") ;
 		assertEquals(expected,actual);
-		
 		expected = false ;
 		actual = sut.writeAWordToDictionary("b3Rk?") ;
 		assertEquals(expected,actual); 
-
 	}
-	
+
 }
